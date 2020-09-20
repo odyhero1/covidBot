@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 const bot = new Discord.Client();
-const token = "NzExOTgyNTI2MDI1MTcxMDY4.XsK82A.FBxyN7FB1kJaedrfWxG644sazBo";
+const token = "";
 bot.on("ready", () => {
   console.log("poop!");
   bot.user.setActivity("kaxtosTV", {
@@ -177,4 +177,4 @@ var req = http.get(options, function (res) {
     });
 });
 
-bot.login(token);
+bot.login(process.env.TOKEN);
