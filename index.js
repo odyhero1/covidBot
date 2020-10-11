@@ -1,13 +1,19 @@
 const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 const bot = new Discord.Client();
-const token = "";
+const token = "***REMOVED***";
 bot.on("ready", () => {
   console.log("poop!");
-  bot.user.setActivity("kaxtosTV", {
-    type: "WATCHING",
+  bot.user.setActivity("covid19", {
+    type: "LISTENING",
   });
 });
+
+
+
+
+
+
 
 let date_ob = new Date();
 
@@ -72,6 +78,7 @@ var req = http.get(options, function (res) {
 
       const result = JSON.parse(body);
 
+
       console.log(result.length);
       console.log(result);
       const dayBeforeyesterdayDetails = result[0];
@@ -106,6 +113,22 @@ var req = http.get(options, function (res) {
           msg.content.includes("covid19") ||
           msg.content.includes("coronavirus")
         ) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           const exampleEmbed = new Discord.MessageEmbed()
             .setColor("#0099ff")
             .setTitle("Cyprus koronoios")
@@ -177,4 +200,4 @@ var req = http.get(options, function (res) {
     });
 });
 
-bot.login(process.env.TOKEN);
+bot.login(token);
