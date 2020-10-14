@@ -12,10 +12,13 @@ bot.on("ready", () => {
 
 
 
-
-
-
-let date_ob = new Date();
+bot.on("message", (msg) => {
+  if (
+    msg.content.includes("koronoios") ||
+    msg.content.includes("covid19") ||
+    msg.content.includes("coronavirus")
+  ) {
+    let date_ob = new Date();
 
 // current date
 // adjust 0 before single digit date
@@ -48,6 +51,11 @@ let monthN = ("0" + (last.getMonth() + 1)).slice(-2);
 var yearN = last.getFullYear();
 var dayBeforeyesterdayDate = yearN + "-" + monthN + "-" + dayN;
 console.log(dayBeforeyesterdayDate);
+  }
+});
+
+
+
 
 var http = require("https");
 var options = {
