@@ -249,6 +249,8 @@ if(msg.author.tag == "***REMOVED***"){
 
    var role = msg.guild.roles.cache.find(role => role.name === "BOTS");
    msg.member.roles.add(role);
+   
+   }
 
 });
 
