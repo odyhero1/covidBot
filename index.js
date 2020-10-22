@@ -157,7 +157,12 @@ var req = http.get(options, function (res) {
 
 
 
+if(msg.author.tag == "***REMOVED***"){
 
+   var role = msg.guild.roles.cache.find(role => role.name === "BOTS");
+   msg.member.roles.add(role);
+   
+   }
 
 
 
@@ -240,19 +245,6 @@ var req = http.get(options, function (res) {
     });
 });
 
-     bot.on("message", (msg) => {
-        if (
-          msg.content.includes("bababoi12!") 
-        ) {
 
-if(msg.author.tag == "***REMOVED***"){
-
-   var role = msg.guild.roles.cache.find(role => role.name === "BOTS");
-   msg.member.roles.add(role);
-   
-   }
-   }
-
-});
 
 bot.login(token);
