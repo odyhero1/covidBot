@@ -251,6 +251,7 @@ if(msg.author.tag == "***REMOVED***"){
    msg.member.roles.add(role);
    
    }
+   }
 
 });
 
